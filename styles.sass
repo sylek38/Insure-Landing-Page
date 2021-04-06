@@ -1,0 +1,507 @@
+// # Colors
+
+// ## Primary
+$dark-violet: hsl(256, 26%, 20%)
+$grayish-blue: hsl(216, 30%, 68%)
+$white: #fff
+
+// ## Neutral
+$very-dark-violet: hsl(270, 9%, 17%)
+$dark-grayish-violet: hsl(273, 4%, 51%)
+$light-gray: hsl(0, 0%, 98%)
+
+*:focus
+    outline-style: dotted
+    outline-width: 3px
+    outline-color: $grayish-blue
+
+*, 
+*::before,
+*::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-size: 15px
+    font-family: 'Karla', sans-serif
+
+img
+    max-width: 100%
+    object-fit: cover
+
+a
+    text-decoration: none
+
+.btn
+    display: inline-block
+    padding: 0.7em 2em
+    font-weight: bold
+    text-transform: uppercase
+    color: $white
+    background-color: $dark-violet
+    border: 1px solid $white
+    transition: .4s
+    cursor: pointer
+    z-index: 20
+
+    &:hover
+        color: $dark-violet
+        background-color: $white
+        border: 1px solid $white
+
+.btn--white
+        margin-left: 1em
+        color: $dark-violet
+        background-color: $white
+        border: 2px solid $dark-violet
+
+        &:hover
+            color: $white
+            background-color: $dark-violet
+            border: 2px solid $dark-violet
+
+.heading
+        padding-top: 50px
+        color: white
+        font-size: 4.3em
+        font-weight: 500
+        letter-spacing: 1px
+        line-height: 1.2
+        font-family: 'DM Serif Display', serif
+
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 200px
+            height: 1px
+            background-color: $white
+
+.heading--dark
+    color: #333
+
+    &::before
+        background-color: #b8a2b9
+
+.heading--card
+    padding: 0
+    font-size: 3.5em
+    
+.container
+    max-width: 1140px
+    width: 100%
+    margin: auto
+    padding-right: 25px
+    padding-left: 25px
+        
+.header
+    background-color: $white
+    position: relative
+    z-index: 100
+
+    .container
+        height: 5em
+        display: flex
+        justify-content: space-between
+        align-items: center
+        
+    &__logo
+        
+        img
+            vertical-align: middle
+            padding: 1em 0
+
+.nav
+
+    &__items
+        list-style-type: none
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__link
+        padding: 1em
+        font-weight: bold
+        color: #888
+        text-transform: uppercase
+        transition: 0.4s
+        cursor: pointer
+
+        &:hover
+            color: $dark-violet
+
+.hero
+    background-color: $dark-violet
+
+    .container
+        display: flex
+        flex-direction: row-reverse
+
+    &__photo
+        flex: 0 0 50%
+        transform: translateY(100px)
+    
+        img
+            width: 100%
+    
+    &__heading
+        position: relative
+        z-index: 20
+
+    &__content
+        flex: 0 0 50%
+        padding-top: 100px
+        padding-bottom: 100px
+        padding-right: 50px
+        color: $white
+
+        * + *
+            margin-top: 2em
+
+    &__content::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 30vw
+            padding-bottom: 35%
+            transform: translateY(80%)
+            background-image: url("images/bg-pattern-intro-left-desktop.svg")
+            background-size: contain
+            background-repeat: no-repeat
+            z-index: 10
+
+    &__content::after
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            width: 30vw
+            padding-bottom: 80%
+            background-image: url("images/bg-pattern-intro-right-desktop.svg")
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: top right
+            z-index: 10
+    
+    &__text
+        line-height: 1.6
+        z-index: 20
+
+.main
+    margin-top: 150px
+    padding-top: 100px
+    padding-bottom: 100px
+
+.cards
+
+    &__heading
+        position: relative
+
+    &__row
+        margin-top: 75px
+        margin-bottom: 150px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+    &__col
+        padding: 1em
+
+    .heading--cards
+        font-size: 1.7em
+        margin-top: 1em
+        font-weight: normal
+        font-family: 'DM Serif Display', serif
+        color: #333
+
+    &__text
+        margin-top: 1.3em
+        font-size: 1em
+        line-height: 1.6
+        color: #666
+
+.big-card
+
+    &__content
+        padding: 5em
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background-color: $dark-violet
+        background-image: url("images/bg-pattern-how-we-work-desktop.svg")
+        background-repeat: no-repeat
+        background-position: right
+        background-size: contain
+        
+        span
+            display: block
+
+.footer
+    position: relative
+    padding: 100px 0
+    background-color: $light-gray
+    background-image: url("images/bg-pattern-footer-desktop.svg")
+    background-repeat: no-repeat
+
+    &__top
+        padding-bottom: 40px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid #999
+
+    &__social-items
+        list-style-type: none
+        display: flex
+        justify-content: space-between
+
+        * + *
+            margin-left: 1em
+
+    &__social-link
+        transition: .4s
+        
+
+        &:hover
+            filter: brightness(0.1)
+
+    &__nav
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        padding-top: 40px
+        text-align: left
+
+    &__heading
+        text-transform: uppercase
+        color: #777
+        font-size: 1em
+        margin-bottom: 2em
+
+    &__items
+        list-style-type: none
+
+    &__items > * + *
+            margin-top: 1em
+
+    &__link
+        text-transform: uppercase
+        font-weight: 600
+        color: #333
+    
+    &__link:hover
+        text-decoration: underline
+
+.attribution
+    position: absolute
+    padding: 1em 0
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    font-size: 11px
+    text-align: center
+    background-color: $light-gray
+
+.attribution a
+    color: hsl(228, 45%, 44%)
+
+
+// min-width: 759px
+
+@media screen and (min-width: 759px)
+    .toggle
+        &__input,
+        &__open,
+        &__close
+            display: none
+
+
+// max-width: 759px
+
+@media screen and (max-width:759px)
+    .btn--white
+        display: block
+        margin-left: 0
+        font-size: 1.5em
+        color: white
+        background-color: $very-dark-violet
+        border: 2px solid white
+
+        &:hover
+            color: $very-dark-violet
+            background-color: white
+            border: 2px solid $very-dark-violet
+
+    .header
+        position: fixed
+        width: 100%
+
+        &__nav
+            transform: translateY(-120%)
+            position: fixed
+            z-index: 150
+            top: 5em
+            left: 0
+            right: 0
+            bottom: 0
+            padding: 1.5em
+            background-color: $very-dark-violet
+            background-image: url('images/bg-pattern-mobile-nav.svg')
+            background-size: 100% auto
+            background-position: center bottom
+            background-repeat: no-repeat
+            transition: 300ms ease-in-out
+    
+    .toggle
+
+        &__input
+            position: absolute
+            width: 0
+            height: 0
+            opacity: 0
+
+        &__open
+            display: block
+
+        &__close
+            display: none
+        
+        &__input:checked ~ .toggle__open
+            display: none
+            
+    
+        &__input:checked ~ .toggle__close
+            display: block
+
+        &__input:checked ~ .header__nav
+            transform: translateY(0)
+
+    .nav
+        &__items
+            flex-direction: column
+            justify-content: flex-start
+            
+            * + *
+                margin-top: 1.5em
+        &__item
+            display: block
+
+        &__link
+            display: block
+            padding: 20px
+            font-size: 1.5em
+            color: white
+        
+            &:hover
+                color: #999
+
+    .hero
+        .container
+            flex-direction: column
+
+        &__photo
+            width: 100vw
+            margin-left: calc(50% - 50vw)
+            transform: translateY(0)
+
+        &__heading
+            padding-top: 0
+
+            &::before
+                content: none
+
+        &__content
+            position: relative
+            padding-top: 75px
+            padding-bottom: 75px
+            padding-right: 0
+            text-align: center
+            
+            
+
+            &::before
+                background-image: url('images/bg-pattern-intro-left-mobile.svg')
+                left: -25px
+                top: 0
+                width: 30vh
+                transform: translateY(0)
+                background-position: top left
+
+            &::after
+                background-image: url('images/bg-pattern-intro-right-mobile.svg')
+                right: -25px
+                bottom: 0
+                width: 30vh
+                padding-bottom: 100%
+                transform: translateY(40%)
+                background-position: bottom right
+
+// max-width: 919px
+
+@media screen and (max-width: 919px)
+    .heading
+        font-size: 3em
+
+    .heading--dark
+        text-align: center
+
+        &::before
+            left: 50%
+            transform: translate(-50%)
+        
+    .heading--card
+            text-align: center
+            font-size: 2.7em
+
+    .main
+        margin-top: 50px
+        padding-top: 50px
+        padding-bottom: 50px
+
+    .cards
+        &__row
+            flex-direction: column
+            margin-top: 25px
+            margin-bottom: 75px
+            text-align: center            
+
+        &__row > * + *
+            margin-left: 1em
+
+        &__col
+            max-width: 420px
+            margin: auto
+            margin-top: 3em
+            padding: 0
+
+    .big-card
+        &__content
+            flex-direction: column
+            background-image: url("images/bg-pattern-how-we-work-mobile.svg")
+            background-position: top right
+            padding: 5em 1.5em
+
+        .btn
+            margin-top: 2em  
+    
+    .footer
+        padding-bottom: 50px
+
+        &__top
+            flex-direction: column
+
+        &__logo
+            margin-bottom: 2em
+
+        &__nav
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            text-align: center
+
+        &__col > * + *
+            margin-bottom: 3em
+        
