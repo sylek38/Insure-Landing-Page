@@ -332,7 +332,7 @@ a {
     width: 100%;
   }
   .header__nav {
-    transform: translateY(-120%);
+    transform: translateX(-100%);
     position: fixed;
     z-index: 150;
     top: 5em;
@@ -345,7 +345,7 @@ a {
     background-size: 100% auto;
     background-position: center bottom;
     background-repeat: no-repeat;
-    transition: 300ms ease-in-out;
+    transition: 0.4s ease-in-out;
   }
 
   .toggle__input {
@@ -367,7 +367,7 @@ a {
     display: block;
   }
   .toggle__input:checked ~ .header__nav {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   .nav__items {
