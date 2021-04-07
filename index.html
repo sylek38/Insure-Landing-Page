@@ -22,19 +22,23 @@
         <img src="images/logo.svg" alt="Insure logo">
       </a>
       <!-- HEADER_TOGGLE BEGIN -->
-      <div class="header__toggle" tabindex="0">
+      <div class="header__toggle">
+
+        <span class="visually-hidden" id="menu-label">Main menu</span>
         
-        <input class="toggle__input" type="checkbox" id="toggle-menu" role="button" >
+        <button class="toggle__btn" id="toggle-menu" aria-labelledby="menu-label" aria-expanded="false" >
 
-        <label class="toggle__open" for="toggle-menu">
-          <img src="images/icon-hamburger.svg" alt="">
-        </label>
-        <label class="toggle__close" for="toggle-menu">
-          <img src="images/icon-close.svg" alt="">
-        </label>
+        <span class="toggle__open active">
+          <img src="images/icon-hamburger.svg" alt="Open menu">
+        </span>
 
+        <span class="toggle__close">
+          <img src="images/icon-close.svg" alt="Close menu">
+        </span>
+
+      </button>
         <!-- NAV BEGIN -->
-        <nav class="header__nav" role="navigation">
+        <nav class="header__nav" role="navigation" aria-labelledby="menu-label"> <!-- showNav -->
           <ul class="nav__items">
             <li class="nav__item">
               <a class="nav__link" href="#">How we work</a>
@@ -229,7 +233,7 @@
       Coded by <a href="https://github.com/sylek38/">Sylwia Werner</a>.
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="index.js"></script>
 
 </body>
 

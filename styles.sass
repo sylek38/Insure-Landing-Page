@@ -113,6 +113,16 @@ a
             vertical-align: middle
             padding: 1em 0
 
+    .visually-hidden
+        position: absolute
+        overlow: hidden
+        clip: rect(0 0 0 0)
+        height: 1px
+        width: 1px
+        margin: -1px
+        padding: 0
+        border: 0
+
 .nav
 
     &__items
@@ -264,7 +274,6 @@ a
     &__social-link
         transition: .4s
         
-
         &:hover
             filter: brightness(0.1)
 
@@ -307,16 +316,14 @@ a
 .attribution a
     color: hsl(228, 45%, 44%)
 
-
 // min-width: 759px
 
 @media screen and (min-width: 759px)
     .toggle
-        &__input,
+        &__btn,
         &__open,
         &__close
             display: none
-
 
 // max-width: 759px
 
@@ -352,31 +359,29 @@ a
             background-size: 100% auto
             background-position: center bottom
             background-repeat: no-repeat
-            transition: .4s ease-in-out
+            transition: .5s ease-in-out
     
     .toggle
 
-        &__input
-            position: absolute
-            width: 0
-            height: 0
-            opacity: 0
-
-        &__open
-            display: block
+        &__btn
+            border: none
+            background-color: $white
+            cursor: pointer
 
         &__close
             display: none
-        
-        &__input:checked ~ .toggle__open
-            display: none
-            
-    
-        &__input:checked ~ .toggle__close
+
+        &__close.active
             display: block
 
-        &__input:checked ~ .header__nav
-            transform: translateX(0)
+        &__open
+            display: none
+
+        &__open.active
+            display: block
+        
+    .showNav
+        transform: translateX(0)
 
     .nav
         &__items
@@ -418,8 +423,6 @@ a
             padding-bottom: 75px
             padding-right: 0
             text-align: center
-            
-            
 
             &::before
                 background-image: url('images/bg-pattern-intro-left-mobile.svg')

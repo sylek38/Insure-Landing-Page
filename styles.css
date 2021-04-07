@@ -111,6 +111,16 @@ a {
   vertical-align: middle;
   padding: 1em 0;
 }
+.header .visually-hidden {
+  position: absolute;
+  overlow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
 
 .nav__items {
   list-style-type: none;
@@ -308,7 +318,7 @@ a {
 }
 
 @media screen and (min-width: 759px) {
-  .toggle__input, .toggle__open, .toggle__close {
+  .toggle__btn, .toggle__open, .toggle__close {
     display: none;
   }
 }
@@ -345,28 +355,28 @@ a {
     background-size: 100% auto;
     background-position: center bottom;
     background-repeat: no-repeat;
-    transition: 0.4s ease-in-out;
+    transition: 0.5s ease-in-out;
   }
 
-  .toggle__input {
-    position: absolute;
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-  .toggle__open {
-    display: block;
+  .toggle__btn {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
   }
   .toggle__close {
     display: none;
   }
-  .toggle__input:checked ~ .toggle__open {
-    display: none;
-  }
-  .toggle__input:checked ~ .toggle__close {
+  .toggle__close.active {
     display: block;
   }
-  .toggle__input:checked ~ .header__nav {
+  .toggle__open {
+    display: none;
+  }
+  .toggle__open.active {
+    display: block;
+  }
+
+  .showNav {
     transform: translateX(0);
   }
 
