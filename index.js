@@ -1,4 +1,3 @@
-
 const toggleBtn = document.querySelector('.toggle__btn');
 
 toggleBtn.addEventListener("click", toggleMenu);
@@ -26,5 +25,4 @@ navLinks.forEach(
         navLink.addEventListener("click", toggleMenu);
     }
 )
-
 }
