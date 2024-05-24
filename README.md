@@ -1,6 +1,7 @@
 ## Insure-Landing-Page
 
 The challenge was to build out this landing page and get it looking as close to the design as possible, trying not to use JavaScript.
+
 Project challenge from: https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW
 
 I was taking this task to enhance my **Sass**, **RWD** + **BEM** skills, paying attention to **Accessibility**.
